@@ -1,6 +1,10 @@
 const UserModel = require("./../models/User");
 const registerValidator = require("./../validators/users/register");
 
+exports.getAll = async (req,res) => {
+    const users = await UserModel.find({}).lean()
+    res.status(200).send(users)
+}
 exports.addOne = (req, res) => {
     const { firstName, lastName, email, password } = req.body;
     const validationResult = registerValidator(req.body);
