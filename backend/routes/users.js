@@ -10,5 +10,6 @@ Router.route("/")
     .post(usersController.addOne);
 Router.route("/:userId").get(isObjectId, usersController.findOne);
 Router.route("/promote/:userId").put(isObjectId, isAdmin, usersController.promote);
+Router.route("/address/:userId").post(isObjectId, usersController.addAddress)
 
 module.exports = Router;

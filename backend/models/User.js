@@ -23,6 +23,10 @@ const schema = new mongoose.Schema(
             required: true,
             minLength: 8,
         },
+        phoneNumber : {
+            type: Number,
+            default: null
+        },
         role : {
             type : String,
             default: "USER"
