@@ -1,4 +1,5 @@
 const UserModel = require("./../models/User");
+const { ObjectId } = require("mongodb")
 const registerValidator = require("./../validators/users/register");
 
 exports.getAll = async (req, res) => {
@@ -64,6 +65,7 @@ exports.addAddress = async (req, res) => {
         const result = await UserModel.findByIdAndUpdate(userId, {
             $addToSet: {
                 address: {
+                    _id : new ObjectId(),
                     name,
                     phoneNumber,
                     building,
@@ -83,3 +85,22 @@ exports.addAddress = async (req, res) => {
         }
     }
 };
+exports.deleteAddress = async (req,res) => {
+    const { userId} = req.params
+    const { addressId } = req.body
+
+    const result = await UserModel.findByIdAndUpdate(userId, {
+        $pull : {
+            address : { _id : new ObjectId(addressId)}
+        }
+    })
+
+    if (result) {
+        res.status(201).send({
+            message: `address deleted from ${result.firstName}'s profile`,
+        });
+    } else {
+        res.status(404).send({ message: "user not found" });
+    }
+
+}
