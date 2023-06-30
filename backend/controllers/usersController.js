@@ -23,12 +23,33 @@ exports.addOne = (req, res) => {
     res.status(201).send({ message: "user created" });
 };
 exports.findOne = async(req,res) => {
-    const { id } = req.params
-    const user = await UserModel.findById({ _id : id})
+    const { userId } = req.params
+    const user = await UserModel.findById(userId)
 
     if(user) {
         res.status(200).send(user)
     }else {
         res.status(404).send({ message: "user not found"})
     }
+}
+exports.promote = async(req,res) => {
+    const { userId } = req.params
+
+    const user = await UserModel.findByIdAndUpdate(userId, {
+        $set : {
+            role : "ADMIN"
+        }
+    })
+
+    if(user) {
+        if(user.role === "ADMIN"){
+            res.status(400).send({ message : "user is admin"})
+        }else {
+            res.status(201).send({ message : `${user.firstName} was promoted to 'Admin'`})
+        }
+    }else {
+        res.status(400).send({message : "user not found"})
+    }
+    
+    
 }

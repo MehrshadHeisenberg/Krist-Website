@@ -8,6 +8,7 @@ const Router = express.Router();
 Router.route("/")
     .get(isAdmin, usersController.getAll)
     .post(usersController.addOne);
-Router.route("/:id").get(isObjectId, usersController.findOne);
+Router.route("/:userId").get(isObjectId, usersController.findOne);
+Router.route("/promote/:userId").put(isObjectId, isAdmin, usersController.promote);
 
 module.exports = Router;
