@@ -31,6 +31,10 @@ const schema = new mongoose.Schema(
             type : String,
             default: "USER"
         },
+        phoneNumber : {
+            type : Number,
+            default : ""
+        },
         basket: {
             type: Object,
             default: [],

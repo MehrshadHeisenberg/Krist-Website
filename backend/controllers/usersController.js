@@ -1,6 +1,7 @@
 const UserModel = require("./../models/User");
 const { ObjectId } = require("mongodb")
 const registerValidator = require("./../validators/users/register");
+const updateValidator = require("./../validators/users/update");
 
 exports.getAll = async (req, res) => {
     const users = await UserModel.find({}).lean();
@@ -155,5 +156,30 @@ exports.getAllNotifications = async (req, res) => {
         res.status(200).send(user.notifications)
     }else {
         res.status(404).send({message : "user not found"})
+    }
+}
+exports.updateInformation = async (req, res) => {
+    const { userId } = req.params
+    const { firstName, lastName, phoneNumber, email} = req.body
+
+    const validationResult = updateValidator(req.body)
+
+    if(validationResult !== true) {
+        return res.status(422).send({ message : "invalid data"})
+    }
+    
+    const result = await UserModel.findByIdAndUpdate(userId , {
+        $set : {
+            firstName,
+            lastName,
+            phoneNumber,
+            email,
+        }
+    })
+
+    if(result) {
+        res.status(201).send({ message : `${result.firstName}'s profile has updated`})
+    }else {
+        res.status(404).send({ message : "user not found"})
     }
 }

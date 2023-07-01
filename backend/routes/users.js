@@ -26,4 +26,7 @@ Router.route("/cards/:userId")
 
 Router.route("/notifications/:userId")
     .get(isObjectId , usersController.getAllNotifications)
+
+Router.route("/information/:userId")
+    .put(isObjectId, usersController.updateInformation)
 module.exports = Router;
