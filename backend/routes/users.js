@@ -24,4 +24,6 @@ Router.route("/cards/:userId")
     .post(isObjectId, usersController.addCard)
     .delete(isObjectId, isObjectIdInBody, usersController.deleteCard);
 
+Router.route("/notifications/:userId")
+    .get(isObjectId , usersController.getAllNotifications)
 module.exports = Router;

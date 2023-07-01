@@ -146,3 +146,14 @@ exports.deleteCard = async (req, res) => {
         res.status(404).send({ message : `user not found`})
     }
 }
+exports.getAllNotifications = async (req, res) => {
+    const { userId } = req.params
+
+    const user = await UserModel.findById(userId)
+
+    if(user) {
+        res.status(200).send(user.notifications)
+    }else {
+        res.status(404).send({message : "user not found"})
+    }
+}
