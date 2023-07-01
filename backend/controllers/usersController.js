@@ -85,7 +85,7 @@ exports.addAddress = async (req, res) => {
         }
     }
 };
-exports.deleteAddress = async (req,res) => {
+exports.deleteAddress = async (req, res) => {
     const { userId} = req.params
     const { addressId } = req.body
 
@@ -104,7 +104,7 @@ exports.deleteAddress = async (req,res) => {
     }
 
 }
-exports.addCard = async (req,res) => {
+exports.addCard = async (req, res) => {
     const { userId } = req.params
     const { cardNumber , cardName , expiryDate , cvv} = req.body
     if (!cardNumber || !cardName || !expiryDate ||  !cvv ) {
@@ -128,5 +128,21 @@ exports.addCard = async (req,res) => {
         }else {
             res.status(404).send({ message : `user not found`})
         }
+    }
+}
+exports.deleteCard = async (req, res) => {
+    const { userId} = req.params
+    const { cardId } = req.body
+
+    const result = await UserModel.findByIdAndUpdate(userId , {
+        $pull : {
+            cards : { _id : new ObjectId(cardId)}
+        }
+    })
+
+    if(result){
+        res.status(201).send({ message : `card deleted from ${result.firstName}'s profile`})
+    }else {
+        res.status(404).send({ message : `user not found`})
     }
 }
