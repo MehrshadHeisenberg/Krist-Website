@@ -104,3 +104,29 @@ exports.deleteAddress = async (req,res) => {
     }
 
 }
+exports.addCard = async (req,res) => {
+    const { userId } = req.params
+    const { cardNumber , cardName , expiryDate , cvv} = req.body
+    if (!cardNumber || !cardName || !expiryDate ||  !cvv ) {
+        res.status(422).send({message : "invalid data"})
+    } else {
+
+        const result = await UserModel.findByIdAndUpdate(userId, {
+            $addToSet : {
+                cards : {
+                    _id : new ObjectId(),
+                    cardNumber,
+                    cardName,
+                    expiryDate,
+                    cvv
+                }
+            }
+        })
+
+        if(result){
+            res.status(201).send({ message : `new card added to ${result.firstName}'s profile`})
+        }else {
+            res.status(404).send({ message : `user not found`})
+        }
+    }
+}

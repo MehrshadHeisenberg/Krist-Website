@@ -14,5 +14,5 @@ Router.route("/promote/:userId").put(isObjectId, isAdmin, usersController.promot
 Router.route("/address/:userId")
     .post(isObjectId, usersController.addAddress)
     .delete(isObjectId,isObjectIdInBody, usersController.deleteAddress);
-
+Router.route("/cards/:userId").post(isObjectId, usersController.addCard)
 module.exports = Router;
