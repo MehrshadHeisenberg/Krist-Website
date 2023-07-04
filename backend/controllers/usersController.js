@@ -1,4 +1,5 @@
 const UserModel = require("./../models/User");
+const ProductModel = require("./../models/Product")
 const { ObjectId } = require("mongodb")
 const registerValidator = require("./../validators/users/register");
 const updateValidator = require("./../validators/users/update");
@@ -181,5 +182,26 @@ exports.updateInformation = async (req, res) => {
         res.status(201).send({ message : `${result.firstName}'s profile has changed`})
     }else {
         res.status(404).send({ message : "user not found"})
+    }
+}
+exports.addToBasket = async (req,res) => {
+    const { userId , productId} = req.params
+
+    const product = await ProductModel.findById(productId)
+
+    if(product) {
+        const user = await UserModel.findByIdAndUpdate(userId , {
+            $addToSet : {
+                basket : product
+            }
+        })
+
+        if(user) {
+            res.status(201).send({ message : `${product.name} added to ${user.firstName}'s basket`})
+        }else {
+            res.status(404).send({ message : "user not found"})
+        }
+    }else {
+        res.status(404).send({ message : "product not found"})
     }
 }
