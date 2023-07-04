@@ -30,5 +30,7 @@ Router.route("/notification/:userId")
 Router.route("/information/:userId")
     .put(isObjectId, usersController.updateInformation)
 
-Router.route("/basket/:userId/:productId").post(isObjectId, usersController.addToBasket)
+Router.route("/basket/:userId/:productId")
+    .post(isObjectId, usersController.addToBasket)
+    .delete(isObjectId, usersController.deleteFromBasket)
 module.exports = Router;

@@ -205,3 +205,25 @@ exports.addToBasket = async (req,res) => {
         res.status(404).send({ message : "product not found"})
     }
 }
+exports.deleteFromBasket = async (req, res) => {
+    const { userId , productId} = req.params
+
+    const product = await ProductModel.findById(productId)
+
+    if(product) {
+        const user = await UserModel.findByIdAndUpdate(userId, {
+            $pull : {
+                basket : { _id : new ObjectId(productId)}
+            }
+        })
+        
+        if(user) {
+            res.status(201).send({ message : `${product.name} deleted from ${user.firstName}'s basket`})
+        }else {
+            res.status(404).send({ message : "user not found"})
+        }
+    }else {
+        res.status(404).send({ message : "product not found"})
+    }
+
+}
