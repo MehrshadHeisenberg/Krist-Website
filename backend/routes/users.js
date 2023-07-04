@@ -20,11 +20,11 @@ Router.route("/address/:userId")
     .post(isObjectId, usersController.addAddress)
     .delete(isObjectId, isObjectIdInBody, usersController.deleteAddress);
 
-Router.route("/cards/:userId")
+Router.route("/card/:userId")
     .post(isObjectId, usersController.addCard)
     .delete(isObjectId, isObjectIdInBody, usersController.deleteCard);
 
-Router.route("/notifications/:userId")
+Router.route("/notification/:userId")
     .get(isObjectId , usersController.getAllNotifications)
 
 Router.route("/information/:userId")

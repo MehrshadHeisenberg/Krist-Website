@@ -12,7 +12,7 @@ const schema = {
     },
     discription : {
         type : "string",
-        min : 10,
+        min : 1,
     },
     price : {
         type : "number",

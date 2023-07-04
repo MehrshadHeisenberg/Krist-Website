@@ -17,7 +17,7 @@ module.exports = async (req,res,next) => {
             res.status(404).send({message : "user not found"})
         }
     }else {
-        res.status(422).send({message : "invalid id"})
+        res.status(422).send({message : "invalid admin id"})
     }
 
 }

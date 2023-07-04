@@ -178,7 +178,7 @@ exports.updateInformation = async (req, res) => {
     })
 
     if(result) {
-        res.status(201).send({ message : `${result.firstName}'s profile has updated`})
+        res.status(201).send({ message : `${result.firstName}'s profile has changed`})
     }else {
         res.status(404).send({ message : "user not found"})
     }
