@@ -12,6 +12,7 @@ Router.route("/:productId")
     .put(isObjectId, isAdmin, productsController.updateOne)
     .delete(isObjectId, isAdmin, productsController.removeOne)
     .get(isObjectId , productsController.getOne)
+Router.route("/review/:productId").post(isObjectId , productsController.addReview)
 
 
 module.exports = Router;

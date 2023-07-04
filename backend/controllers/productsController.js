@@ -1,4 +1,5 @@
 const ProductModel = require("./../models/Product");
+const { ObjectId } = require("mongodb")
 const addProductValidator = require("./../validators/products/addProduct");
 
 exports.getAll = async (req , res) => {
@@ -89,3 +90,29 @@ exports.removeOne = async (req, res) => {
         res.status(402).send({ message : "prduct not found"})
     }
 };
+exports.addReview = async (req,res) => {
+    const { productId } = req.params
+    const { name , email , description} = req.body
+
+    if(name && email && description) {
+        const product = await ProductModel.findByIdAndUpdate(productId , {
+            $addToSet : {
+                reviews : {
+                    _id : new ObjectId(),
+                    name,
+                    email,
+                    description,
+                    createdAt : new Date()
+                }
+            }
+        })
+
+        if(product){
+            res.status(201).send({ message : `review added to ${product.name}'s reviews`})
+        }else {
+            res.status(404).send({ message : "product not found"})
+        }
+    }else {
+        res.status(422).send({ message : "invalid data"})
+    }
+}
