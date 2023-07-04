@@ -33,4 +33,8 @@ Router.route("/information/:userId")
 Router.route("/basket/:userId/:productId")
     .post(isObjectId, usersController.addToBasket)
     .delete(isObjectId, usersController.deleteFromBasket)
+
+Router.route("/wishlist/:userId/:productId")
+    .post(isObjectId, usersController.addToWishlist)
+    
 module.exports = Router;

@@ -227,3 +227,24 @@ exports.deleteFromBasket = async (req, res) => {
     }
 
 }
+exports.addToWishlist = async (req,res) => {
+    const { userId , productId} = req.params
+
+    const product = await ProductModel.findById(productId)
+
+    if(product) {
+        const user = await UserModel.findByIdAndUpdate(userId , {
+            $addToSet : {
+                wishlists : product
+            }
+        })
+
+        if(user) {
+            res.status(201).send({ message : `${product.name} added to ${user.firstName}'s wishlist`})
+        }else {
+            res.status(404).send({ message : "user not found"})
+        }
+    }else {
+        res.status(404).send({ message : "product not found"})
+    }
+}
