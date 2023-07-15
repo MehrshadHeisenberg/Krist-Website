@@ -1,0 +1,125 @@
+////////////////////////////////////
+/// COLOR PALLETES
+
+// PRIMARY Colors
+$clr-primary-100: #a29fa9;
+$clr-primary-200: #8d8a94;
+$clr-primary-300: #77757c;
+$clr-primary-400: #575360;
+$clr-primary-500: #131118;
+$clr-primary-600: #14111c;
+$clr-primary-700: #14111c;
+$clr-primary-800: #14111c;
+$clr-primary-900: #14111c;
+
+$clr-primary-90: rgba(19, 17, 24, 0.9);
+$clr-primary-80: rgba(19, 17, 24, 0.8);
+$clr-primary-20: rgba(19, 17, 24, 0.2);
+$clr-primary-10: rgba(19, 17, 24, 0.1);
+$clr-primary-5: rgba(19, 17, 24, 0.05);
+
+// SECONDARY Colors
+$clr-secondary-100: #e1f1bc;
+$clr-secondary-200: #cee993;
+$clr-secondary-300: #bcde6b;
+$clr-secondary-400: #afd751;
+$clr-secondary-500: #a3d139;
+$clr-secondary-600: #97bd33;
+$clr-secondary-700: #88a52a;
+$clr-secondary-800: #798d21;
+$clr-secondary-900: #626615;
+
+$clr-secondary-90: rgba(163, 209, 57, 0.9);
+$clr-secondary-80: rgba(163, 209, 57, 0.8);
+$clr-secondary-20: rgba(163, 209, 57, 0.2);
+$clr-secondary-10: rgba(163, 209, 57, 0.1);
+$clr-secondary-5: rgba(163, 209, 57, 0.05);
+
+// TERTIARY Colors
+$clr-tertiary-100: #f0b0d9;
+$clr-tertiary-200: #e67bc2;
+$clr-tertiary-300: #d846ab;
+$clr-tertiary-400: #cd0d9b;
+$clr-tertiary-500: #b21589;
+$clr-tertiary-600: #af0a87;
+$clr-tertiary-700: #9b0982;
+$clr-tertiary-800: #8a087c;
+$clr-tertiary-900: #6c0772;
+
+$clr-tertiary-90: rgba(178, 21, 137, 0.9);
+$clr-tertiary-80: rgba(178, 21, 137, 0.8);
+$clr-tertiary-20: rgba(178, 21, 137, 0.2);
+$clr-tertiary-10: rgba(178, 21, 137, 0.1);
+$clr-tertiary-5: rgba(178, 21, 137, 0.05);
+
+// DARK Colors
+$clr-dark-500: #131118;
+$clr-dark-90: rgba(19, 17, 24, 0.9);
+$clr-dark-80: rgba(19, 17, 24, 0.8);
+$clr-dark-20: rgba(19, 17, 24, 0.2);
+$clr-dark-10: rgba(19, 17, 24, 0.1);
+$clr-dark-5: rgba(19, 17, 24, 0.05);
+
+// GRAY Colors
+$clr-gray-500: #a4a1aa;
+$clr-gray-90: rgba(164, 161, 170, 0.9);
+$clr-gray-80: rgba(164, 161, 170, 0.8);
+$clr-gray-20: rgba(164, 161, 170, 0.2);
+$clr-gray-10: rgba(164, 161, 170, 0.1);
+$clr-gray-5: rgba(164, 161, 170, 0.05);
+
+// LIGHT Colors
+$clr-light-500: #d9e1e1;
+$clr-light-90: rgba(217, 225, 225, 0.9);
+$clr-light-80: rgba(217, 225, 225, 0.8);
+$clr-light-20: rgba(217, 225, 225, 0.2);
+$clr-light-10: rgba(217, 225, 225, 0.1);
+$clr-light-5: rgba(217, 225, 225, 0.05);
+
+// WHITE Colors
+$clr-white-500: #ffffff;
+$clr-white-90: rgba(255, 255, 255, 0.9);
+$clr-white-80: rgba(255, 255, 255, 0.8);
+$clr-white-20: rgba(255, 255, 255, 0.2);
+$clr-white-10: rgba(255, 255, 255, 0.1);
+$clr-white-5: rgba(255, 255, 255, 0.05);
+
+/// Color OPTIONS
+$clr-green-option: #30be82;
+$clr-green-light-option: #30beb6;
+$clr-purple-option: #5d30be;
+$clr-blue-option: #304fbe;
+
+/// GRADIENTS
+
+// GREEN Gradient
+$gradient-green-1: rgba(127, 190, 48, 1);
+$gradient-green-2: rgba(48, 165, 190, 1);
+
+// BLUE Gradient
+$gradient-blue-1: rgba(48, 190, 182, 1);
+$gradient-blue-2: rgba(48, 105, 190, 1);
+
+// PURPLE Gradient
+$gradient-purple-1: rgba(93, 48, 190, 1);
+$gradient-purple-2: rgba(179, 48, 190, 1);
+////////////////////////////////////
+
+////////////////////////////////////
+// TYPOGRAPHY
+// FONT-WEIGHTS
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// FONT-SIZES
+$font-size-80: 8rem;
+$font-size-60: 6rem;
+$font-size-40: 4rem;
+$font-size-30: 3rem;
+$font-size-24: 2.4rem;
+$font-size-20: 2rem;
+$font-size-18: 1.8rem;
+$font-size-16: 1.6rem;
+$font-size-14: 1.4rem;
+$font-size-12: 1.2rem;
+$font-size-1: 1.1rem;

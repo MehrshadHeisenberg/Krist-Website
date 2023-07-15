@@ -1,0 +1,126 @@
+@use "../abstracts/variables" as *;
+
+main {
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.hero {
+  padding: 0 12rem;
+  background-color: $clr-dark-5;
+  height: 100vh;
+
+  position: relative;
+
+  &::after {
+    content: "BESTSELLER";
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+
+    font-size: 18rem;
+    font-weight: $font-weight-bold;
+    color: $clr-white-500;
+  }
+
+  &__text-box {
+    flex: 0 1 50%;
+  }
+
+  &__off {
+    text-transform: uppercase;
+  }
+
+  &__img-box {
+    flex: 0 1 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: right;
+    position: relative;
+
+    &__square {
+      position: absolute;
+      bottom: 2rem;
+      right: 3rem;
+
+      width: 45rem;
+      height: 68rem;
+
+      border: 2rem solid $clr-white-500;
+      border-top: 2rem solid transparent;
+
+      z-index: 200;
+    }
+
+    &__square--top {
+      position: absolute;
+      bottom: 2rem;
+      right: 3rem;
+
+      width: 45rem;
+      height: 68rem;
+
+      border-top: 2rem solid $clr-white-500;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: auto;
+
+    z-index: 100;
+  }
+}
+
+.categories {
+  padding: 0 12rem;
+
+  &__nav {
+    justify-content: space-between;
+  }
+
+  &__icons {
+    gap: 2rem;
+  }
+
+  &__boxes {
+    justify-content: space-between;
+  }
+
+  &__box {
+    background-color: $clr-dark-5;
+
+    width: 26rem;
+    height: 36rem;
+
+    position: relative;
+
+    justify-content: right;
+    align-items: flex-end;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    padding: 1.35rem;
+
+    border: none;
+    background-color: $clr-white-500;
+    border-radius: 1rem;
+  }
+
+  &__span {
+    position: absolute;
+    top: 1rem;
+    left: 5px;
+
+    font-weight: $font-weight-bold;
+    color: $clr-dark-5;
+    font-size: 6rem;
+  }
+}

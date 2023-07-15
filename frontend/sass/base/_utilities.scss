@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as *;
+
+.mar-bot-150 {
+  margin-bottom: 15rem;
+}
+
+.mar-bot-100 {
+  margin-bottom: 10rem;
+}
+
+.mar-bot-50 {
+  margin-bottom: 5rem;
+}
+
+.mar-bot-42 {
+  margin-bottom: 4.2rem;
+}
+
+.mar-bot-5 {
+  margin-bottom: 5px;
+}
+
+.icon-24 {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.icon-s--dark {
+  stroke: $clr-dark-500;
+  fill: none;
+}
+
+.icon-f--dark {
+  fill: $clr-dark-500;
+  stroke: none;
+}
+
+.icon-s--light {
+  stroke: $clr-white-500;
+  fill: none;
+}
+
+.icon-f--light {
+  fill: $clr-white-500;
+  stroke: none;
+}

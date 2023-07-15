@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as *;
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 1.7rem 2.5rem;
+  font-size: $font-size-16;
+  border: none;
+  border-radius: 1rem;
+}
+
+.btn--dark {
+  background-color: $clr-dark-500;
+  color: $clr-white-500;
+}
+
+.btn--light {
+  background-color: $clr-gray-10;
+  columns: $clr-dark-500;
+}
