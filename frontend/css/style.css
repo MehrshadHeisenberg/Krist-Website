@@ -14,6 +14,16 @@ body {
   position: relative;
 }
 
+@font-face {
+  font-family: "Jost";
+  font-weight: 400;
+  src: local("Jost Regular"), url(../../fonts/Jost-Regular.woff2), url(../../fonts/jost-400-book-webfont.woff);
+}
+@font-face {
+  font-family: "Jost";
+  font-weight: 700;
+  src: local("Jost Bold"), url(../../fonts/Jost-Bold.woff2), url(../../fonts/jost-700-bold-webfont.woff);
+}
 html {
   font-size: 62.5%;
 }
@@ -36,6 +46,19 @@ body {
 .text {
   font-size: 1.6rem;
   font-weight: 400;
+  font-family: inherit;
+}
+
+.text-medium {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.text-big {
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: inherit;
 }
 
 .text--light {
@@ -49,16 +72,16 @@ body {
 .title {
   font-size: 1.6rem;
   font-weight: 700;
+  font-family: inherit;
 }
 
-.text-medium {
-  font-size: 3rem;
-  font-weight: 400;
+.strikethr {
+  color: #a4a1aa;
+  text-decoration: line-through;
 }
 
-.text-big {
-  font-size: 4rem;
-  font-weight: 400;
+.text-ali-center {
+  text-align: center;
 }
 
 .mar-bot-150 {
@@ -77,8 +100,24 @@ body {
   margin-bottom: 4.2rem;
 }
 
+.mar-bot-20 {
+  margin-bottom: 2rem;
+}
+
 .mar-bot-5 {
   margin-bottom: 5px;
+}
+
+.pad-rl-15 {
+  padding: 0 15rem;
+}
+
+.pad-rl-12 {
+  padding: 0 12rem;
+}
+
+.pad-rl-3 {
+  padding: 0 3rem;
 }
 
 .icon-24 {
@@ -113,6 +152,7 @@ body {
   font-size: 1.6rem;
   border: none;
   border-radius: 1rem;
+  font-family: inherit;
 }
 
 .btn--dark {
@@ -123,6 +163,23 @@ body {
 .btn--light {
   background-color: rgba(164, 161, 170, 0.1);
   columns: #131118;
+}
+
+.product-card__img-box {
+  background-color: rgba(164, 161, 170, 0.05);
+  width: 27.5rem;
+  height: 33rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-card__img {
+  width: 85%;
+  height: auto;
+}
+
+.long-dress {
+  width: 40%;
 }
 
 .flex-h {
@@ -139,11 +196,13 @@ body {
 .grid-3-col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
 }
 
 .grid-4-col-e {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
 }
 
 .header {
@@ -180,6 +239,7 @@ body {
   grid-column-gap: 3.1rem;
   padding: 4rem;
   background-color: #ffffff;
+  z-index: 1000000;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s;
@@ -235,16 +295,13 @@ header .header__options .header__shop-box:hover ~ .mega-menu__background {
   opacity: 1;
 }
 
-main {
-  padding-right: 3rem;
-  padding-left: 3rem;
-}
-
 .hero {
-  padding: 0 12rem;
   background-color: rgba(19, 17, 24, 0.05);
   height: 100vh;
   position: relative;
+}
+.hero__section {
+  padding: 0 3rem;
 }
 .hero::after {
   content: "BESTSELLER";
@@ -292,9 +349,6 @@ main {
   z-index: 100;
 }
 
-.categories {
-  padding: 0 12rem;
-}
 .categories__nav {
   justify-content: space-between;
 }
@@ -322,6 +376,7 @@ main {
   border: none;
   background-color: #ffffff;
   border-radius: 1rem;
+  font-family: inherit;
 }
 .categories__span {
   position: absolute;
@@ -330,6 +385,10 @@ main {
   font-weight: 700;
   color: rgba(19, 17, 24, 0.05);
   font-size: 6rem;
+}
+
+.bestseller {
+  grid-template-rows: 1fr 1fr;
 }
 
 /*# sourceMappingURL=style.css.map */

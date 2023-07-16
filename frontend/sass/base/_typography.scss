@@ -1,5 +1,20 @@
 @use "../abstracts/variables" as *;
 
+@font-face {
+  font-family: "Jost";
+  font-weight: $font-weight-regular;
+  src: local("Jost Regular"), url(../../fonts/Jost-Regular.woff2),
+    url(../../fonts/jost-400-book-webfont.woff);
+}
+
+@font-face {
+  font-family: "Jost";
+  font-weight: $font-weight-bold;
+  src: local("Jost Bold"), url(../../fonts/Jost-Bold.woff2),
+    url(../../fonts/jost-700-bold-webfont.woff);
+}
+
+// RESETING
 html {
   font-size: 62.5%;
 }
@@ -9,6 +24,7 @@ body {
   color: $clr-dark-500;
 }
 
+// HEADINGS
 .heading-primary {
   font-size: $font-size-60;
   font-weight: $font-weight-bold;
@@ -19,9 +35,23 @@ body {
   font-weight: $font-weight-regular;
 }
 
+// TEXTS
 .text {
   font-size: $font-size-16;
   font-weight: $font-weight-regular;
+  font-family: inherit;
+}
+
+.text-medium {
+  font-size: $font-size-30;
+  font-weight: $font-weight-regular;
+  font-family: inherit;
+}
+
+.text-big {
+  font-size: $font-size-40;
+  font-weight: $font-weight-regular;
+  font-family: inherit;
 }
 
 .text--light {
@@ -35,14 +65,15 @@ body {
 .title {
   font-size: $font-size-16;
   font-weight: $font-weight-bold;
+  font-family: inherit;
 }
 
-.text-medium {
-  font-size: $font-size-30;
-  font-weight: $font-weight-regular;
+// FEATURES
+.strikethr {
+  color: $clr-gray-500;
+  text-decoration: line-through;
 }
 
-.text-big {
-  font-size: $font-size-40;
-  font-weight: $font-weight-regular;
+.text-ali-center {
+  text-align: center;
 }

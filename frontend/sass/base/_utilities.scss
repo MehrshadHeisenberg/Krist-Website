@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as *;
 
+// MARGINS
 .mar-bot-150 {
   margin-bottom: 15rem;
 }
@@ -16,10 +17,28 @@
   margin-bottom: 4.2rem;
 }
 
+.mar-bot-20 {
+  margin-bottom: 2rem;
+}
+
 .mar-bot-5 {
   margin-bottom: 5px;
 }
 
+// PADDINGS
+.pad-rl-15 {
+  padding: 0 15rem;
+}
+
+.pad-rl-12 {
+  padding: 0 12rem;
+}
+
+.pad-rl-3 {
+  padding: 0 3rem;
+}
+
+// ICONS
 .icon-24 {
   width: 2.4rem;
   height: 2.4rem;

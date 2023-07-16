@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as *;
+
+.product-card {
+  &__img-box {
+    background-color: $clr-gray-5;
+    width: 27.5rem;
+    height: 33rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 85%;
+    height: auto;
+  }
+}
+
+.long-dress {
+  width: 40%;
+}

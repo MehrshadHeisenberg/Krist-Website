@@ -1,12 +1,10 @@
 @use "../abstracts/variables" as *;
 
-main {
-  padding-right: 3rem;
-  padding-left: 3rem;
-}
-
 .hero {
-  padding: 0 12rem;
+  &__section {
+    padding: 0 3rem;
+  }
+
   background-color: $clr-dark-5;
   height: 100vh;
 
@@ -74,8 +72,6 @@ main {
 }
 
 .categories {
-  padding: 0 12rem;
-
   &__nav {
     justify-content: space-between;
   }
@@ -112,6 +108,7 @@ main {
     border: none;
     background-color: $clr-white-500;
     border-radius: 1rem;
+    font-family: inherit;
   }
 
   &__span {
@@ -123,4 +120,8 @@ main {
     color: $clr-dark-5;
     font-size: 6rem;
   }
+}
+
+.bestseller {
+  grid-template-rows: 1fr 1fr;
 }

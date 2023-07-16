@@ -4,12 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+
     <title>Krist Shopping Website</title>
   </head>
   <body>
@@ -32,7 +27,7 @@
               <use xlink:href="svg/sprite.svg#down"></use>
             </svg>
           </a>
-          <div class="mega-menu grid-4-col">
+          <div class="mega-menu">
             <div class="mega-menu__part">
               <span class="mega-menu__title title">Men</span>
               <ul class="mega-menu__list flex-v">
@@ -168,24 +163,26 @@
       <div class="mega-menu__background"></div>
     </header>
     <main>
-      <section class="hero flex-h mar-bot-100">
-        <div class="hero__text-box">
-          <p class="text-big mar-bot-5">Classic Exclusive</p>
-          <h1 class="heading-primary mar-bot-5">Women's Collection</h1>
-          <p class="text-medium hero__off mar-bot-50">Up to 40% off</p>
-          <button class="btn btn--dark text">Shop Now &rightarrow;</button>
-        </div>
-        <div class="hero__img-box">
-          <img
-            src="img/hero.png"
-            alt="A classy woman in a nice red suit with a black hat"
-            class="hero__img"
-          />
-          <div class="hero__img-box__square"></div>
-          <div class="hero__img-box__square--top"></div>
+      <section class="hero__section mar-bot-100 pad-rl-3">
+        <div class="hero flex-h pad-rl-12">
+          <div class="hero__text-box">
+            <p class="text-big mar-bot-5">Classic Exclusive</p>
+            <h1 class="heading-primary mar-bot-5">Women's Collection</h1>
+            <p class="text-medium hero__off mar-bot-50">Up to 40% off</p>
+            <button class="btn btn--dark text">Shop Now &rightarrow;</button>
+          </div>
+          <div class="hero__img-box">
+            <img
+              src="img/hero.png"
+              alt="A classy woman in a nice red suit with a black hat"
+              class="hero__img"
+            />
+            <div class="hero__img-box__square"></div>
+            <div class="hero__img-box__square--top"></div>
+          </div>
         </div>
       </section>
-      <section class="categories mar-bot-150">
+      <section class="categories mar-bot-150 pad-rl-15">
         <div class="categories__nav flex-h mar-bot-50">
           <h2 class="heading-secondary mar-bot-42">Shop by Categories</h2>
           <div class="categories__icons flex-h">
@@ -239,6 +236,131 @@
               class="categories__img"
             />
             <button class="categories__btn text--dark text">Kids Wear</button>
+          </div>
+        </div>
+      </section>
+      <section class="bestseller mar-bot-150 pad-rl-15">
+        <h2 class="heading-secondary mar-bot-50 text-ali-center">
+          Our bestseller
+        </h2>
+        <div class="bestseller-box grid-4-col-e">
+          <div class="product-card">
+            <div class="product-card__img-box mar-bot-20">
+              <img
+                src="img/products/pro-black-shirt.png"
+                alt="Printed Cotton T-Shirt"
+                class="product-card__img"
+              />
+            </div>
+            <p class="title title--dark mar-bot-5">Roadstar</p>
+            <p class="text text--dark mar-bot-5">Printed Cotton T-Shirt</p>
+            <p class="text text--dark">
+              $38.00 <span class="strikethr">$40.00</span>
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-card__img-box mar-bot-20">
+              <img
+                src="img/products/pro-bag.png"
+                alt="Women Textured Handheld Bag"
+                class="product-card__img"
+              />
+            </div>
+            <p class="title title--dark mar-bot-5">Allen Solly</p>
+            <p class="text text--dark mar-bot-5">Women Textured Handheld Bag</p>
+            <p class="text text--dark">
+              $80.00 <span class="strikethr">$100.00</span>
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-card__img-box mar-bot-20">
+              <img
+                src="img/products/pro-white-shirt.png"
+                alt="Polo Collar T-Shirt"
+                class="product-card__img"
+              />
+            </div>
+            <p class="title title--dark mar-bot-5">Louis Philippe Sport</p>
+            <p class="text text--dark mar-bot-5">Polo Collar T-Shirt</p>
+            <p class="text text--dark">
+              $50.00 <span class="strikethr">$55.00</span>
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-card__img-box mar-bot-20">
+              <img
+                src="img/products/pro-sports-shoe.png"
+                alt="Men adi-dash Running Shoes"
+                class="product-card__img"
+              />
+            </div>
+            <p class="title title--dark mar-bot-5">Adidas</p>
+            <p class="text text--dark mar-bot-5">Men adi-dash Running Shoes</p>
+            <p class="text text--dark">
+              $60.00 <span class="strikethr">$75.00</span>
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-card__img-box mar-bot-20">
+              <img
+                src="img/products/pro-long-dress.png"
+                alt="Floral Embroidered Maxi Dress"
+                class="product-card__img long-dress"
+              />
+            </div>
+            <p class="title title--dark mar-bot-5">Trendyol</p>
+            <p class="text text--dark mar-bot-5">
+              Floral Embroidered Maxi Dress
+            </p>
+            <p class="text text--dark">
+              $35.00 <span class="strikethr">$45.00</span>
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-card__img-box mar-bot-20">
+              <img
+                src="img/products/pro-dress-short.png"
+                alt="Girls Pink Moana Printed Dress"
+                class="product-card__img"
+              />
+            </div>
+            <p class="title title--dark mar-bot-5">YK Disney</p>
+            <p class="text text--dark mar-bot-5">
+              Girls Pink Moana Printed Dress
+            </p>
+            <p class="text text--dark">
+              $80.00 <span class="strikethr">$100.00</span>
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-card__img-box mar-bot-20">
+              <img
+                src="img/products/pro-redots-shirt.png"
+                alt="Tailored Cotton Casual Shirt"
+                class="product-card__img"
+              />
+            </div>
+            <p class="title title--dark mar-bot-5">US Polo</p>
+            <p class="text text--dark mar-bot-5">
+              Tailored Cotton Casual Shirt
+            </p>
+            <p class="text text--dark">
+              $40.00 <span class="strikethr">$50.00</span>
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-card__img-box mar-bot-20">
+              <img
+                src="img/products/pro-women-shoe.png"
+                alt="Women Sandals"
+                class="product-card__img"
+              />
+            </div>
+            <p class="title title--dark mar-bot-5">Zyla</p>
+            <p class="text text--dark mar-bot-5">Women Sandals</p>
+            <p class="text text--dark">
+              $35.00 <span class="strikethr">$40.00</span>
+            </p>
           </div>
         </div>
       </section>
