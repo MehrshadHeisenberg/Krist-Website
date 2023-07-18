@@ -31,6 +31,7 @@ html {
 body {
   font-family: "Jost", sans-serif;
   color: #131118;
+  line-height: 1.6;
 }
 
 .heading-primary {
@@ -46,19 +47,31 @@ body {
 .text {
   font-size: 1.6rem;
   font-weight: 400;
-  font-family: inherit;
+}
+
+.text-small {
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .text-medium {
   font-size: 3rem;
   font-weight: 400;
-  font-family: inherit;
 }
 
 .text-big {
   font-size: 4rem;
   font-weight: 400;
-  font-family: inherit;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.title-big {
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .text--light {
@@ -67,12 +80,6 @@ body {
 
 .text--dark {
   color: #131118;
-}
-
-.title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  font-family: inherit;
 }
 
 .strikethr {
@@ -100,23 +107,31 @@ body {
   margin-bottom: 4.2rem;
 }
 
+.mar-bot-30 {
+  margin-bottom: 3rem;
+}
+
 .mar-bot-20 {
   margin-bottom: 2rem;
+}
+
+.mar-bot-10 {
+  margin-bottom: 1rem;
 }
 
 .mar-bot-5 {
   margin-bottom: 5px;
 }
 
-.pad-rl-15 {
+.pad-rl-150 {
   padding: 0 15rem;
 }
 
-.pad-rl-12 {
+.pad-rl-120 {
   padding: 0 12rem;
 }
 
-.pad-rl-3 {
+.pad-rl-30 {
   padding: 0 3rem;
 }
 
@@ -389,6 +404,30 @@ header .header__options .header__shop-box:hover ~ .mega-menu__background {
 
 .bestseller {
   grid-template-rows: 1fr 1fr;
+}
+
+.deals__box {
+  gap: 3rem;
+}
+.deals__part {
+  flex: 0 1 50%;
+}
+.deals__img {
+  width: 100%;
+  height: auto;
+}
+.deals__time {
+  gap: 2rem;
+}
+.deals__number-box {
+  border-radius: 2rem;
+  border: 1px solid rgba(164, 161, 170, 0.2);
+  width: 8.6rem;
+  height: 8.6rem;
+  align-items: center;
+}
+.deals__desc {
+  padding-right: 8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

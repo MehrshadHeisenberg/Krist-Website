@@ -14,7 +14,7 @@
     url(../../fonts/jost-700-bold-webfont.woff);
 }
 
-// RESETING
+// SETTING THE BASE SETTINGS
 html {
   font-size: 62.5%;
 }
@@ -22,6 +22,7 @@ html {
 body {
   font-family: "Jost", sans-serif;
   color: $clr-dark-500;
+  line-height: 1.6;
 }
 
 // HEADINGS
@@ -35,25 +36,38 @@ body {
   font-weight: $font-weight-regular;
 }
 
-// TEXTS
+// TEXTS SIZES
 .text {
   font-size: $font-size-16;
   font-weight: $font-weight-regular;
-  font-family: inherit;
+}
+
+.text-small {
+  font-size: $font-size-20;
+  font-weight: $font-weight-regular;
 }
 
 .text-medium {
   font-size: $font-size-30;
   font-weight: $font-weight-regular;
-  font-family: inherit;
 }
 
 .text-big {
   font-size: $font-size-40;
   font-weight: $font-weight-regular;
-  font-family: inherit;
 }
 
+.title {
+  font-size: $font-size-16;
+  font-weight: $font-weight-bold;
+}
+
+.title-big {
+  font-size: $font-size-30;
+  font-weight: $font-weight-bold;
+}
+
+// TEXT COLORS
 .text--light {
   color: $clr-white-500;
 }
@@ -62,13 +76,7 @@ body {
   color: $clr-dark-500;
 }
 
-.title {
-  font-size: $font-size-16;
-  font-weight: $font-weight-bold;
-  font-family: inherit;
-}
-
-// FEATURES
+// TEXT FEATURES
 .strikethr {
   color: $clr-gray-500;
   text-decoration: line-through;

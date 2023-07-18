@@ -125,3 +125,35 @@
 .bestseller {
   grid-template-rows: 1fr 1fr;
 }
+
+.deals {
+  &__box {
+    gap: 3rem;
+  }
+
+  &__part {
+    flex: 0 1 50%;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__time {
+    gap: 2rem;
+  }
+
+  &__number-box {
+    border-radius: 2rem;
+    border: 1px solid $clr-gray-20;
+    width: 8.6rem;
+    height: 8.6rem;
+
+    align-items: center;
+  }
+
+  &__desc {
+    padding-right: 8rem;
+  }
+}
