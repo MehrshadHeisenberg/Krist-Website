@@ -135,6 +135,10 @@ body {
   padding: 0 3rem;
 }
 
+.pad-ud-50 {
+  padding: 5rem 0;
+}
+
 .icon-24 {
   width: 2.4rem;
   height: 2.4rem;
@@ -158,6 +162,10 @@ body {
 .icon-f--light {
   fill: #ffffff;
   stroke: none;
+}
+
+.icon-star {
+  fill: rgb(245, 158, 11);
 }
 
 .btn {
@@ -428,6 +436,38 @@ header .header__options .header__shop-box:hover ~ .mega-menu__background {
 }
 .deals__desc {
   padding-right: 8rem;
+}
+
+.testimonials {
+  background-color: rgba(164, 161, 170, 0.05);
+}
+.testimonials__nav {
+  justify-content: space-between;
+}
+.testimonials__icons {
+  gap: 2rem;
+}
+.testimonials__items {
+  gap: 3rem;
+}
+.testimonials__testimonial {
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+.testimonials__stars {
+  gap: 2px;
+}
+.testimonials__profile {
+  gap: 1rem;
+}
+.testimonials__profile--img {
+  width: 100%;
+  height: auto;
+}
+.testimonials__profile--job {
+  color: #a4a1aa;
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -46,6 +46,10 @@
   padding: 0 3rem;
 }
 
+.pad-ud-50 {
+  padding: 5rem 0;
+}
+
 // ICONS
 .icon-24 {
   width: 2.4rem;
@@ -70,4 +74,8 @@
 .icon-f--light {
   fill: $clr-white-500;
   stroke: none;
+}
+
+.icon-star {
+  fill: $clr-gold;
 }

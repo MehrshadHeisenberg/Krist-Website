@@ -157,3 +157,43 @@
     padding-right: 8rem;
   }
 }
+
+.testimonials {
+  background-color: $clr-gray-5;
+
+  &__nav {
+    justify-content: space-between;
+  }
+
+  &__icons {
+    gap: 2rem;
+  }
+
+  &__items {
+    gap: 3rem;
+  }
+
+  &__testimonial {
+    background-color: $clr-white-500;
+    padding: 3rem;
+    border-radius: 1rem;
+  }
+
+  &__stars {
+    gap: 2px;
+  }
+
+  &__profile {
+    gap: 1rem;
+
+    &--img {
+      width: 100%;
+      height: auto;
+    }
+
+    &--job {
+      color: $clr-gray-500;
+      font-size: 1.4rem;
+    }
+  }
+}
