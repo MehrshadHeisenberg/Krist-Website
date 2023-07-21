@@ -26,7 +26,7 @@ exports.addOne = (req, res) => {
     res.status(201).send({ message: "user created" });
 };
 exports.findOne = async (req, res) => {
-    const { userId } = req.params;
+    const { userId } = req.query;
     const user = await UserModel.findById(userId);
 
     if (user) {
@@ -36,7 +36,7 @@ exports.findOne = async (req, res) => {
     }
 };
 exports.promote = async (req, res) => {
-    const { userId } = req.params;
+    const { userId } = req.query;
 
     const user = await UserModel.findByIdAndUpdate(userId, {
         $set: {
@@ -57,7 +57,7 @@ exports.promote = async (req, res) => {
     }
 };
 exports.addAddress = async (req, res) => {
-    const { userId } = req.params;
+    const { userId } = req.query;
     const { name, phoneNumber, building, area, city, pinCode, state } =
         req.body;
 
@@ -88,8 +88,7 @@ exports.addAddress = async (req, res) => {
     }
 };
 exports.deleteAddress = async (req, res) => {
-    const { userId} = req.params
-    const { addressId } = req.body
+    const { userId , addressId} = req.query
 
     const result = await UserModel.findByIdAndUpdate(userId, {
         $pull : {
@@ -107,7 +106,7 @@ exports.deleteAddress = async (req, res) => {
 
 }
 exports.addCard = async (req, res) => {
-    const { userId } = req.params
+    const { userId } = req.query
     const { cardNumber , cardName , expiryDate , cvv} = req.body
     if (!cardNumber || !cardName || !expiryDate ||  !cvv ) {
         res.status(422).send({message : "invalid data"})
@@ -133,8 +132,7 @@ exports.addCard = async (req, res) => {
     }
 }
 exports.deleteCard = async (req, res) => {
-    const { userId} = req.params
-    const { cardId } = req.body
+    const { userId, cardId} = req.query
 
     const result = await UserModel.findByIdAndUpdate(userId , {
         $pull : {
@@ -149,7 +147,7 @@ exports.deleteCard = async (req, res) => {
     }
 }
 exports.getAllNotifications = async (req, res) => {
-    const { userId } = req.params
+    const { userId } = req.query
 
     const user = await UserModel.findById(userId)
 
@@ -160,7 +158,7 @@ exports.getAllNotifications = async (req, res) => {
     }
 }
 exports.updateInformation = async (req, res) => {
-    const { userId } = req.params
+    const { userId } = req.query
     const { firstName, lastName, phoneNumber, email} = req.body
 
     const validationResult = updateValidator(req.body)
@@ -185,7 +183,7 @@ exports.updateInformation = async (req, res) => {
     }
 }
 exports.addToBasket = async (req,res) => {
-    const { userId , productId} = req.params
+    const { userId , productId} = req.query
 
     const product = await ProductModel.findById(productId)
 
@@ -206,7 +204,7 @@ exports.addToBasket = async (req,res) => {
     }
 }
 exports.deleteFromBasket = async (req, res) => {
-    const { userId , productId} = req.params
+    const { userId , productId} = req.query
 
     const product = await ProductModel.findById(productId)
 
@@ -228,7 +226,7 @@ exports.deleteFromBasket = async (req, res) => {
 
 }
 exports.addToWishlist = async (req,res) => {
-    const { userId , productId} = req.params
+    const { userId , productId} = req.query
 
     const product = await ProductModel.findById(productId)
 
@@ -249,7 +247,7 @@ exports.addToWishlist = async (req,res) => {
     }
 }
 exports.deleteFromWishlist = async (req, res) => {
-    const { userId , productId} = req.params
+    const { userId , productId} = req.query
 
     const product = await ProductModel.findById(productId)
 

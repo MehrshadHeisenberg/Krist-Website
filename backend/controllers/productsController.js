@@ -11,7 +11,7 @@ exports.getAll = async (req , res) => {
     }
 }
 exports.getOne = async (req, res) => {
-    const { productId } = req.params 
+    const { productId } = req.query 
     const product = await ProductModel.findById(productId)
 
     if(product){
@@ -47,7 +47,7 @@ exports.addOne = (req, res) => {
     res.status(201).send({ message: "product created" });
 };
 exports.updateOne = async (req, res) => {
-    const { productId } = req.params;
+    const { productId } = req.query;
     const { title, name, discription, price, color, size } = req.body;
 
     const validationResult = addProductValidator({
@@ -80,7 +80,7 @@ exports.updateOne = async (req, res) => {
     }
 };
 exports.removeOne = async (req, res) => {
-    const { productId } = req.params
+    const { productId } = req.query
 
     const product = await ProductModel.findByIdAndDelete(productId)
 
@@ -91,7 +91,7 @@ exports.removeOne = async (req, res) => {
     }
 };
 exports.addReview = async (req,res) => {
-    const { productId } = req.params
+    const { productId } = req.query
     const { name , email , description} = req.body
 
     if(name && email && description) {

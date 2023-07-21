@@ -5,17 +5,19 @@ const isAdmin = require("./../middlewares/isAdmin");
 
 const Router = express.Router();
 
+Router.use(isObjectId)
+
 Router.route("/")
     .post(isAdmin, productsController.addOne)
     .get(productsController.getAll);
 
-Router.route("/:productId")
-    .put(isObjectId, isAdmin, productsController.updateOne)
-    .delete(isObjectId, isAdmin, productsController.removeOne)
-    .get(isObjectId , productsController.getOne)
+Router.route("/product") // /product?productId
+    .put(isAdmin, productsController.updateOne)
+    .delete(isAdmin, productsController.removeOne)
+    .get(productsController.getOne)
 
-Router.route("/review/:productId")
-    .post(isObjectId , productsController.addReview)
+Router.route("/review") // /review?productId
+    .post(productsController.addReview)
 
 
 module.exports = Router;
