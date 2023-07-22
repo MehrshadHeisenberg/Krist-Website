@@ -69,6 +69,11 @@ body {
   font-weight: 700;
 }
 
+.title-medium {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 .title-big {
   font-size: 3rem;
   font-weight: 700;
@@ -115,6 +120,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.mar-bot-16 {
+  margin-bottom: 1.6rem;
+}
+
 .mar-bot-10 {
   margin-bottom: 1rem;
 }
@@ -142,6 +151,11 @@ body {
 .icon-24 {
   width: 2.4rem;
   height: 2.4rem;
+}
+
+.icon-36 {
+  width: 3.6rem;
+  height: 3.6rem;
 }
 
 .icon-s--dark {
@@ -468,6 +482,23 @@ header .header__options .header__shop-box:hover ~ .mega-menu__background {
 .testimonials__profile--job {
   color: #a4a1aa;
   font-size: 1.4rem;
+}
+
+.stories__box {
+  justify-content: center;
+  gap: 3rem;
+}
+.stories__story-box {
+  width: 26.2rem;
+  height: 26.2rem;
+}
+.stories__story-img {
+  width: 100%;
+  height: auto;
+}
+
+.features {
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */
