@@ -197,3 +197,24 @@
     }
   }
 }
+
+.stories {
+  &__box {
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  &__story-box {
+    width: 26.2rem;
+    height: 26.2rem;
+  }
+
+  &__story-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.features {
+  justify-content: space-between;
+}

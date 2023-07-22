@@ -32,7 +32,7 @@
     <path d="M9 6L9 7C9 8.65685 10.3431 10 12 10C13.6569 10 15 8.65685 15 7V6"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
     <path d="M15.6115 3H8.38848C6.43313 3 4.76436 4.41365 4.44291 6.3424L2.77624 16.3424C2.36988 18.7805 4.25006 21 6.72182 21H17.2781C19.7499 21 21.6301 18.7805 21.2237 16.3424L19.557 6.3424C19.2356 4.41365 17.5668 3 15.6115 3Z"  stroke-width="1.5" stroke-linejoin="round"></path>
   </symbol>
-  <symbol  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 36" id="dollor">
+  <symbol  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 36" id="dollar">
     <circle cx="18.6667" cy="18" r="15"  stroke-width="2.25"></circle>
     <path d="M21.6667 15C21.6667 13.3431 20.3236 12 18.6667 12C17.0099 12 15.6667 13.3431 15.6667 15C15.6667 16.6569 17.0099 18 18.6667 18"  stroke-width="2.25" stroke-linecap="round"></path>
     <path d="M18.6667 18C20.3236 18 21.6667 19.3431 21.6667 21C21.6667 22.6569 20.3236 24 18.6667 24C17.0099 24 15.6667 22.6569 15.6667 21"  stroke-width="2.25" stroke-linecap="round"></path>
