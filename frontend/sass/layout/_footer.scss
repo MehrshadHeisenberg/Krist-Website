@@ -1,0 +1,97 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+  padding-top: 5rem;
+  background-color: $clr-dark-500;
+
+  &-box {
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid $clr-white-20;
+    height: 100%;
+  }
+
+  &__logo-box {
+    width: 14.3rem;
+  }
+
+  &__logo {
+    width: 100%;
+    height: auto;
+  }
+
+  &__column {
+    flex-basis: 25%;
+  }
+
+  &__column--contact {
+    gap: 3rem;
+    flex-basis: 32%;
+  }
+
+  &__logo-box {
+    margin-bottom: 1.1rem;
+  }
+
+  &__contact {
+    gap: 1rem;
+    align-items: start;
+  }
+
+  &__list {
+    list-style: none;
+    gap: 1.6rem;
+  }
+
+  &__input-box {
+    width: 100%;
+    height: 3.8rem;
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid $clr-white-500;
+    background-color: transparent;
+    border-radius: 1rem;
+    padding: 1rem;
+    outline: none;
+  }
+
+  &__label {
+    justify-content: space-between;
+
+    width: 92%;
+
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--left {
+      opacity: 0.7;
+      gap: 1rem;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+  }
+
+  &__bottom {
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+
+  &__cards {
+    gap: 1rem;
+  }
+
+  &__socials {
+    gap: 2rem;
+  }
+}
