@@ -3,7 +3,17 @@ const { ObjectId } = require("mongodb")
 const addProductValidator = require("./../validators/products/addProduct");
 
 exports.getAll = async (req , res) => {
+    // let queryObj = { ...req.query }
+    // const excludedFields = ['page', 'sort', 'limit', 'fields']
+    // excludedFields.forEach(el => delete queryObj[el])
+
+    // let queryStr = JSON.stringify(queryObj)
+    // queryStr = queryStr.replace(/\b(gt|gte|lt|lte)\b/g, el => `$${el}`)
+    // queryObj = JSON.parse(queryStr)
+
+    // const products = await ProductModel.find(queryObj).lean()
     const products = await ProductModel.find({}).lean()
+
     if(products){
         res.status(200).send(products)
     }else {
